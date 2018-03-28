@@ -19,6 +19,7 @@ troubleshooting APM in your own environment.
 Expected time to complete: **4 hours**
 
 Labs covered in this class:
+
 .. toctree::
    :maxdepth: 1
    :glob:

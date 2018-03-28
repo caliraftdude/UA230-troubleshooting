@@ -8,33 +8,6 @@ There are four labs that cover this class:
 
    lab*
 
-
-Lab Network Setup
------------------
-
-In the interest of focusing as much time as possible configuring and
-troubleshooting APM, we have provided some resources and basic setup
-ahead of time. These are:
-
--  Cloud-based lab environment complete with Jump Host, Virtual BIG-IP
-   (VE) and Lab Server
-
--  Duplicate Lab environments for each student for improved
-   collaboration
-
--  Virtual BIG-IP has been pre-licensed and provisioned for Access
-   Policy Manager (APM)
-
-If you wish to replicate these labs in your office you will need to
-perform these steps accordingly. Additional lab resources are provided
-as illustrated in the diagram below:
-
-LAB Environment Diagram
-
-|image0|
-
-Source: N/A
-
 Timing for Labs
 ---------------
 
@@ -88,8 +61,3 @@ install the UCS archive by using the \ **tmsh no-license** option. For
 the command syntax, refer to the following example:
 
     tmsh load sys ucs [ucs file name] no-license
-
-
-.. |image0| image:: media/image2.tiff
-   :width: 6.48475in
-   :height: 4.17870in

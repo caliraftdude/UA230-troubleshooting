@@ -6,7 +6,7 @@ Welcome
 
 Welcome to the |classbold| lab at F5 Agility |year|
 
-|repoinfo|
+.. TODO:: Write some inspiring crap here
 
 .. toctree::
    :maxdepth: 2
@@ -16,5 +16,3 @@ Welcome to the |classbold| lab at F5 Agility |year|
 
    intro*
    class*/class*
-   examples
-   markdown
