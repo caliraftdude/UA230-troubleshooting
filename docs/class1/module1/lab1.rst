@@ -1,49 +1,306 @@
-Lab – Download the |bip| |ve| Image
+LAB I – APM Troubleshooting Lab Object Preparation
+==================================================
+
+The purpose of this lab is to preconfigure some objects that will be
+used throughout the other labs. These objects are as follows:
+
+-  Domain Name Services (DNS) Resolver
+
+-  Network Time Protocol (NTP) Server
+
+-  Access Policy (APM) AAA Server – Active Directory
+
+-  Access Policy (APM) SSO Configuration – NTLMv1
+
+-  Access Policy (APM) Access Profile
+
+-  Local Traffic (LTM) Pool and Member
+
+-  Local Traffic (LTM) Virtual Server
+
+Connect to the Lab
+------------------
+
+|image1|
+
+1. Establish an RDP connection to your Jump Host and double-click on the
+   **BIG-IP** Chrome shortcut on the Windows desktop.
+
+   -  User: agility
+   -  Password: Agility1
+
+2. Ignore the certificate warning.
+
+3. Login into the BIG-IP Configuration Utility with the desktop icon (or
+   Favorite link in Chrome) with the following credentials:
+
+   -  User: **admin**
+   -  Password: **admin**
+
+DNS Resolver for System Configuration
+-------------------------------------
+
+|image2|
+
+1. Create a DNS entry by selecting: System  Configuration  Device 
+   DNS
+
+|image3|
+
+1. In the Properties Section for DNS Lookup Server List, enter
+   **10.128.20.100** in the Address field and click the **ADD** button.
+
+2. Scroll down to the DNS Search Domain List section and enter
+   **agilitylab.com** in the Address field and click the **ADD** button.
+
+3. Click the **UPDATE** button at the bottom of the page to save the
+   changes you just made.
+
+NTP Server for System Configuration
 -----------------------------------
 
-.. TODO:: Needs lab description
+|image4|
 
-This lab will teach you how to download the |bip| |ve| image to your system.
+1. Create a NTP entry by selecting: System  Configuration  Device 
+   NTP
 
-Task – Open a Web Browser
-~~~~~~~~~~~~~~~~~~~~~~~~~
+|image5|
 
-.. TODO:: Needs task description
+1. In the Properties Section for Time Server List, enter
+   **10.128.20.100** in the Address field and click the **ADD** button.
 
-In this task you will open a web browser and navigate to the |f5| Downloads
-site.
+2. Click the **UPDATE** button at the bottom of the page to save the
+   changes you just made.
 
-.. NOTE:: An account is required to download software.  You can create one at
-   https://login.f5.com/resource/registerEmail.jsp
+Access Policy (APM) AAA Server – Active Directory Object Creation
+-----------------------------------------------------------------
 
-Follow these steps to complete this task:
+|image6|
 
-#. Open your web browser
-#. Navigate to https://downloads.f5.com
-#. Login with your username and password.
-#. After logging in you should see the following window:
+1. Create a new AAA Server Object of type Active Directory by selecting:
+   Access  Authentication  Active Directory
 
-   |image1|
+|image7|
 
-Task – Download the Image
-~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Click the **CREATE** button on right side of page.
 
-.. TODO:: Needs task description
+|image8|
 
-In this task we will download the |f5| |bip| |ve| image to your system
+1. Under General Properties type **LAB\_AD\_AAA** in the name field.
 
-Follow these steps to complete this task:
+2. In the Configuration Section, Click the radio button option next to
+   **Direct** in the Server Connection row.
 
-#. Click the 'Find a Download' button.
+3. In the Domain Name field enter **agilitylab.com**
 
-   .. image:: /_static/image002.png
+4. Leave the Domain Controller, Admin Name and Admin Password fields
+   blank for now.
 
-#. Click the link that contains the |bip| TMOS software version you would like
-   to download.
+5. Click the **FINISHED** button at the bottom of the page to save your
+   changes.
 
-   .. IMPORTANT:: Be sure to click a link that has "\ |ve|" in the name
+Access Policy (APM) SSO Configuration – NTLMv1
+----------------------------------------------
 
-#. Find the image appropriate for your hypervisor
-#. Download the image and save it to you local system
+|image9|
 
-.. |image1| image:: /_static/image001.png
+1. Create a new SSO Configuration Object of type NTLM by selecting:
+   Access  Single Sign-On  NTLMV1
+
+|image10|
+
+1. Click the **CREATE** button on the right side of the page.
+
+|image11|
+
+1. In the Name field enter **Agility\_Lab\_SSO\_NTLM**
+
+2. Click the **FINISHED** button at the bottom.
+
+Access Policy (APM) Access Profile Creation
+-------------------------------------------
+
+|image12|
+
+1. Create a new APM Profile Object of type ALL by selecting: Access 
+   Profiles/Policies  Access Profiles (Per-Session Policies)
+
+|image13|
+
+1. Click the **CREATE** button on the right side of the page.
+
+|image14|
+
+1. In the Name field enter, **Agility-Lab-Access-Profile**
+
+2. In the Profile Type drop down list select **All**
+
+3. **In the Profile Scope drop down list select Profile**
+
+|image15|
+
+1. In the Settings section click the checkbox to the right of Access
+   Policy Timeout and change the value from 300, to **30**, seconds.
+
+|image16|
+
+1. Scroll the bottom of the page and in the Language Settings section,
+   click to highlight **English** in the Factory Builtin Languages box,
+   then click the left **<<** arrows to move it to the left box labeled
+   Accepted Languages.
+
+2. Click the **FINISHED** button at the bottom of the page to save your
+   changes.
+
+Local Traffic (LTM) Pool and Member Creation
+--------------------------------------------
+
+|image17|
+
+1. Create a new LTM Pool and Member by selecting Local Traffic  Pools
+   Pools List
+
+|image18|
+
+1. Click the **CREATE** button on the right side of the page.
+
+|image19|
+
+1. In the Name field enter **Agility-Lab-Pool**
+
+2. In the Resources section, in the New Members area, enter
+   **10.128.20.100** in the Address field.
+
+3. In the Service Port field, enter **80**, or select **HTTP** from the
+   drop-down menu.
+
+4. Click the **ADD** button
+
+5. Click the **FINISHED** button at the bottom to save your changes.
+
+Local Traffic (LTM) Virtual Server Creation
+-------------------------------------------
+
+This lab will walk you through creating the Virtual Server we will use
+during the course of the lab. This Virtual Server will be used to
+associate Access Policies which will be evaluated when authenticating
+users.
+
+|image20|
+
+1. Create an new Virtual Server by selecting Local Traffic  Virtual
+   Servers  Virtual Server List
+
+|image21|
+
+1. Click the **CREATE** button on the right side of the page.
+
+|image22|
+
+1. Under the General Properties section, in the Name field enter
+   **Agility-LTM-VIP**
+
+2. In the Destination Address field enter **10.128.10.100**
+
+3. In the Service Port fields enter **443**, or select **HTTPS** from
+   the drop-down menu
+
+|image23|
+
+1. Under the Configuration section, in the HTTP Profile field use the
+   drop-down menu to select **http**
+
+2. In the SSL Profile (Client) field select **clientssl** from the
+   Available profiles then use the **<<** left arrows to move it to the
+   Selected box.
+
+3. Ensure VLAN and Tunnel Traffic is set to **All VLANs and Tunnels**
+
+4. In the Source Address Translation field select **Auto Map** from the
+   drop-down menu.
+
+|image24|
+
+1. Scroll down to the Access Profile section, select
+   **Agility-Lab-Access-Profile** from the drop-down menu.
+
+|image25|
+
+1. Click the **FINISHED** button to save your changes.
+
+
+.. |image1| image:: /_static/image3.png
+   :width: 5.30000in
+   :height: 3.34687in
+.. |image2| image:: /_static/image4.png
+   :width: 5.30000in
+   :height: 1.87749in
+.. |image3| image:: /_static/image5.png
+   :width: 5.28125in
+   :height: 7.47544in
+.. |image4| image:: /_static/image6.png
+   :width: 5.30000in
+   :height: 1.48855in
+.. |image5| image:: /_static/image7.png
+   :width: 5.28125in
+   :height: 3.99637in
+.. |image6| image:: /_static/image9.png
+   :width: 5.30972in
+   :height: 2.05069in
+.. |image7| image:: /_static/image10.png
+   :width: 5.21875in
+   :height: 0.71782in
+.. |image8| image:: /_static/image11.png
+   :width: 5.21875in
+   :height: 6.02240in
+.. |image9| image:: /_static/image13.png
+   :width: 5.30972in
+   :height: 2.66111in
+.. |image10| image:: /_static/image14.png
+   :width: 5.30000in
+   :height: 0.79642in
+.. |image11| image:: /_static/image16.png
+   :width: 5.30972in
+   :height: 6.01667in
+.. |image12| image:: /_static/image18.png
+   :width: 5.30972in
+   :height: 1.95069in
+.. |image13| image:: /_static/image19.png
+   :width: 5.30000in
+   :height: 0.42589in
+.. |image14| image:: /_static/image21.png
+   :width: 5.30972in
+   :height: 2.25208in
+.. |image15| image:: /_static/image22.png
+   :width: 5.23333in
+   :height: 2.07270in
+.. |image16| image:: /_static/image23.png
+   :width: 5.18567in
+   :height: 2.05208in
+.. |image17| image:: /_static/image24.png
+   :width: 5.25792in
+   :height: 2.94792in
+.. |image18| image:: /_static/image25.png
+   :width: 5.30000in
+   :height: 0.88333in
+.. |image19| image:: /_static/image26.png
+   :width: 5.23958in
+   :height: 5.90988in
+.. |image20| image:: /_static/image27.png
+    :width: 5.28571in
+    :height: 2.00000in
+.. |image21| image:: /_static/image28.png
+    :width: 5.30000in
+    :height: 0.47834in
+.. |image22| image:: /_static/image29.png
+    :width: 5.27083in
+    :height: 3.12743in
+.. |image23| image:: /_static/image30.png
+    :width: 5.19792in
+    :height: 5.54507in
+.. |image24| image:: /_static/image31.png
+    :width: 5.30913in
+    :height: 2.26042in
+.. |image25| image:: /_static/image32.png
+    :width: 5.30000in
+    :height: 1.04073in

@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "UA230 - Troubleshooting Uninversal Access"
+classname = "UA 230 Troubleshooting Universal Access"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/caliraftdude/UA230-troubleshooting.git"
@@ -124,8 +124,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = classname
-copyright = u'2017, F5 Networks, Inc.'
-author = u'F5 Networks, Inc.'
+copyright = u'2018, F5 Networks, Inc.'
+author = u'Dan Holland for F5 Networks, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -256,6 +256,3 @@ texinfo_documents = [
      author, classname, classname,
      'Training'),
 ]
-
-
-
