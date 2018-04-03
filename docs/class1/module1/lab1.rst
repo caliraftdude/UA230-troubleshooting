@@ -1,21 +1,15 @@
-LAB I – APM Troubleshooting Lab Object Preparation
+LAB I – Manual Configuration using the GUI
 ==================================================
 
 The purpose of this lab is to preconfigure some objects that will be
 used throughout the other labs. These objects are as follows:
 
 -  Domain Name Services (DNS) Resolver
-
 -  Network Time Protocol (NTP) Server
-
 -  Access Policy (APM) AAA Server – Active Directory
-
 -  Access Policy (APM) SSO Configuration – NTLMv1
-
 -  Access Policy (APM) Access Profile
-
 -  Local Traffic (LTM) Pool and Member
-
 -  Local Traffic (LTM) Virtual Server
 
 Connect to the Lab

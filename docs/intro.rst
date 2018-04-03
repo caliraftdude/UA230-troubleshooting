@@ -28,6 +28,7 @@ as illustrated in the diagram below:
 
 LAB Environment Diagram
 -----------------------
+
 |image0|
 
 Source: N/A
@@ -60,6 +61,6 @@ The following table lists VLANS, IP Addresses and Credentials for all components
         - **External:** 10.1.20.250
       - ``admin``/``admin``
 
-.. |image0| image:: /_static/image2.tiff
-	 :width: 6.48475in
-	 :height: 4.17870in
+.. |image0| image:: /_static/lab_image.png
+	 :width: 13.10in
+	 :height: 8.44in
