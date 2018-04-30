@@ -1,4 +1,4 @@
-LAB 4: Command Line Tools
+Lab 4: Command Line Tools
 ===========================
 
 This lab will show you how to make use of some of the Command Line

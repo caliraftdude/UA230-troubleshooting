@@ -1,5 +1,5 @@
-LAB 3: Visual Policy Editor (VPE) & Session Variables
-=====================================================
+Lab 3: Visual Policy Editor (VPE) & Session Variables
+=======================================================
 
 This lab will go a little deeper into understanding the Visual Policy
 Editor and Session Variables.

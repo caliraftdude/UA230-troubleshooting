@@ -1,4 +1,4 @@
-LAB 2: General Troubleshooting
+Lab 2: General Troubleshooting
 ================================
 
 In this lab exercise, you will learn where to look and what to look at

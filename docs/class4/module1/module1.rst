@@ -1,4 +1,4 @@
-LAB 1: APM Troubleshooting Lab Object Preparation
+Lab 1: APM Troubleshooting Lab Object Preparation
 ==================================================
 
 The purpose of this lab is to preconfigure some objects that will be
