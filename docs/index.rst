@@ -1,15 +1,20 @@
-F5 Agility Labs - Index
-=======================
+Welcome
+=======
 
-Welcome to the |classbold| lab at F5 Agility |year|
+Welcome to the Identity & Access Management lab series at Agility |year|.
 
-.. TODO:: Write some inspiring crap here
+The following labs and exercises will instruct you on how to configure and
+troubleshoot federation use cases based on the experience of field
+engineers, support engineers and clients. This guide is intended to
+complement lecture material provided during the course as well as a
+reference guide that can be referred to after the class as a basis for
+configuring federation relationships in your own environment.
+
+|repoinfo|
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+   :maxdepth: 2
    :caption: Contents:
    :glob:
 
-   intro*
    class*/class*
