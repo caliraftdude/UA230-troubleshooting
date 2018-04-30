@@ -1,18 +1,20 @@
+
 Conclusion
 ==========
 
-<template placeholder - to be updated>
+.. todo:: Add conclusion text
 
 Learn More
 ----------
 
 **Links & Information**
 
--  **Secure Web Gateway Services Product Info:**
+-  **xxxxxx**
 
-   https://f5.com/products/big-ip/secure-web-gateway-services-swgs
+   xxxxxx
 
--  **SWG Reference Architecture:**
+-  **xxxxxxx**
 
-   https://f5.com/solutions/enterprise/reference-architectures/secure-web-gateway
+   xxxxxx
+
 
