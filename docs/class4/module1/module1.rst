@@ -1,21 +1,17 @@
-Lab 1: APM Troubleshooting Lab Object Preparation
-==================================================
+Lab 1: APM Troubleshooting Lab Object Preparation (GUI)
+=======================================================
+
+*Note:  You only need to perform one of Lab 1, 2, or 3.  They accomplish the same thing only in different ways.  Lab 2 gets the Lab Preparation using TMSH*
 
 The purpose of this lab is to preconfigure some objects that will be
 used throughout the other labs. These objects are as follows:
 
 -  Domain Name Services (DNS) Resolver
-
 -  Network Time Protocol (NTP) Server
-
 -  Access Policy (APM) AAA Server – Active Directory
-
 -  Access Policy (APM) SSO Configuration – NTLMv1
-
 -  Access Policy (APM) Access Profile
-
 -  Local Traffic (LTM) Pool and Member
-
 -  Local Traffic (LTM) Virtual Server
 
 Connect to the Lab
@@ -42,8 +38,7 @@ DNS Resolver for System Configuration
 
 |image2|
 
-1. Create a DNS entry by selecting: System  Configuration  Device 
-   DNS
+1. Create a DNS entry by selecting: System->Configuration->Device->DNS
 
 |image3|
 
