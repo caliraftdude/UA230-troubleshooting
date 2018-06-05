@@ -33,24 +33,30 @@ Connect to the Lab via SSH
    -  Password: **default**
 
 4. Log in to tmsh by typing the following command:
-**tmsh**
+
+   **tmsh**
 
 
 DNS Resolver for System Configuration (TMSH)
 --------------------------------------------
 1. To add a name server to your /etc/resolv.conf file, use the following command syntax, replacing <IP addresses> with your IP addresses:
-**modify sys dns name-servers add { <IP addresses> }**
+
+   **modify sys dns name-servers add { <IP addresses> }**
 
 2. To add domains to your search list use the following command replacing <domains> with the domain you wish to add:
-**modify sys dns search add { <domains> }**
+
+   **modify sys dns search add { <domains> }**
 
 3. Configure as follows:
-**modify sys dns name-servers add { 10.128.20.100 }**
-**modify sys dns search add { agilitylab.com }**
-**save sys config**
+
+   **modify sys dns name-servers add { 10.128.20.100 }**
+
+   **modify sys dns search add { agilitylab.com }**
+
+   **save sys config**
 
 4. To verify, use the following command:
-**list sys dns**
+   **list sys dns**
   
    You should see the following reply:
 |image250|
@@ -59,14 +65,18 @@ DNS Resolver for System Configuration (TMSH)
 NTP Server for System Configuration (TMSH)
 ------------------------------------------
 1. To configure one or more NTP servers for the BIG-IP system, use the following command syntax:
-**modify /sys ntp servers add {hostname hostname....}**
+
+   **modify sys ntp servers add {hostname hostname....}**
 
 2. Configure as follows:
-**modify sys ntp servers add { 10.128.20.100 }
-**save sys config**
+
+   **modify sys ntp servers add { 10.128.20.100 }**
+
+   **save sys config**
 
 3. To verify, use the following command:
-**list sys ntp**
+
+   **list sys ntp**
 
    You snould see the following reply:
 |image251|
@@ -74,51 +84,112 @@ NTP Server for System Configuration (TMSH)
 Access Policy (APM) AAA Server – Active Directory Object Creation (TMSH)
 ------------------------------------------------------------------------
 1. To configure an Active Directory AAA Server object, use the following command syntax:
-**create apm aaa active-directory <name> domain <domain-name> use-pool <disabled>**
+
+   **create apm aaa active-directory <name> domain <domain-name> use-pool <disabled>**
 
 2. Configure as follows:
-**create apm aaa active-directory LAB\_AD\_AAA domain agilitylab.com use-pool disabled**
-**save sys config**
+
+   **create apm aaa active-directory LAB\_AD\_AAA domain agilitylab.com use-pool disabled**
+
+   **save sys config**
 
 3. To verify, use the following command:
-**list apm aaa**
+
+   **list apm aaa**
 
    You should see the following reply:
 |image252|
 
-
 Access Policy (APM) SSO Configuration – NTLMv1 (TMSH)
 -----------------------------------------------------
 1. To configure an NTLMv1 SSO profile, use the following command syntax:
-**create apm sso ntlmv1 <profile_name>**
+
+   **create apm sso ntlmv1 <profile_name>**
 
 2. Configure as follows:
-**create apm sso ntlmv1 Agility_Lab_SSO_NTLM**
 
+   **create apm sso ntlmv1 Agility_Lab_SSO_NTLM**
+
+   **save sys config**
+
+3. To verify, use the command:
+
+   **list apm sso**
+
+   You should see the following reply:
+|image253|
 
 Access Policy (APM) Access Profile Creation (TMSH)
 --------------------------------------------------
-1. To configure an Access Profile use the following command syntax:
-**TEST**
+ .. todo:: Figure out and Fix! *this is BROKEN*
 
+1. To configure an Access Profile you will need to submit a transaction
 2. Configure as follows:
-**TEST**
+
+   **tmsh create cli transaction**
+
+   **create apm policy agent ending-allow Agility-Lab-Access-Test-end-allow-ag {}**
+
+   **create apm policy agent ending-deny Agility-Lab-Access-Test-end-deny-ag {}** 
+
+   **create apm policy policy-item Agility-Lab-Access-Test-end-allow { agents add { Agility-Lab-Access-Test-end-allow-ag { type ending-allow } } caption Allow color 1 item-type ending }**
+
+   **create apm policy policy-item Agility-Lab-Access-Test-end-deny { agents add { Agility-Lab-Access-Test-end-deny-ag { type ending-deny } } caption Deny color 2 item-type ending }**
+
+   **create apm policy policy-item Agility-Lab-Access-Test-ent { caption Start color 1 rules { { caption  fallback next-item Agility-Lab-Access-Test-end-deny } } }**
+
+   **create apm policy access-policy Agility-Lab-Access-Test { default-ending Agility-Lab-Access-Test-end-deny items add { Agility-Lab-Access-Test-end-allow {} Agility-Lab-Access-Test-end-deny {} Agility-Lab-Access-Test-ent {} } start-item Agility-Lab-Access-Test-ent }**
+
+   **create apm profile access Agility-Lab-Access-Test { accept-languages add { en } access-policy Agility-Lab-Access-Test }**
+
+   **submit cli transaction**
+
+   **save sys config**
+
+3. To verify, use the following command:
+
+   **list apm profile**
+
+   You should see the following reply:
+|image254|
 
 Local Traffic (LTM) Pool and Member Creation (TMSH)
 ---------------------------------------------------
 1. To configure a LTM Pool and Pool members, use the following command syntax:
-**TEST**
+
+   **create ltm pool <pool-name> members add { <IP-addr>:<service-port> }**
 
 2. Configure as follows:
-**TEST**
+
+   **create ltm pool Agility-Lab-Pool members add { 10.128.20.100:80 }**
+
+   **save sys config**
+
+3. To verify, use the following command:
+
+   **list ltm pool**
+
+   You should see the following reply:
+|image255|
 
 Local Traffic (LTM) Virtual Server Creation (TMSH)
 --------------------------------------------------
 1. To configure a virtual server, use the following command syntax:
-**TEST**
+
+   **create ltm virtual Agility-LTM-VIP { destination 10.128.10.100:443 profiles add { clientssl http Agility-Lab-Access-Profile } vlans default source-address-translation { type automap } }**
 
 2. Configure as follows:
-**TEST**
+
+   **create ltm virtual Agility-LTM-VIP { destination 10.128.10.100:443 profiles add { clientssl http Agility-Lab-Access-Profile } vlans default source-address-translation { type automap } }**
+
+   **save sys config**
+
+3. To verify, use the following command:
+
+   **list ltm virtual**
+
+4. You should see the following reply:
+|image256|
 
 .. |image1| image:: /_static/class4/image3.png
    :width: 5.30000in
@@ -132,3 +203,16 @@ Local Traffic (LTM) Virtual Server Creation (TMSH)
 .. |image252| image:: /_static/class4/image252.png
    :width: 589px
    :height: 83px
+.. |image253| image:: /_static/class4/image253.png
+   :width: 603px
+   :height: 33px
+.. |image254| image:: /_static/class4/image254.png
+   :width: 264px
+   :height: 191px
+.. |image255| image:: /_static/class4/image255.png
+   :width: 718px
+   :height: 127px
+.. |image256| image:: /_static/class4/image256.png
+   :width: 759px
+   :height: 337px
+
