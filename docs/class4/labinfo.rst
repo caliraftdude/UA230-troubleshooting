@@ -32,10 +32,10 @@ ahead of time. These are:
 
 .. NOTE::
    All work for this lab will be performed exclusively from the Windows
-   jumphost. No installation or interaction with your local system is
+   jump host. No installation or interaction with your local system is
    required.
 
-If you wish to replicate these labs in your office you will need to
+If you wish to replicate these lab exercises in your own lab environment, you will need to
 perform these steps accordingly. Additional lab resources are provided
 as illustrated in the diagram below:
 
