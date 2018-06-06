@@ -1,7 +1,7 @@
 Lab 1: APM Troubleshooting Lab Object Preparation (GUI)
 =======================================================
 
-*Note:  You only need to perform one of Lab 1, 2, or 3.  They accomplish the same thing only in different ways.  Lab 2 gets the Lab Preparation using TMSH*
+*Note:  You only need to perform EITHER Lab 1 OR Lab 2.  They accomplish the same thing only in different ways.  Lab 2 gets the Lab Preparation using TMSH*
 
 The purpose of this lab is to preconfigure some objects that will be
 used throughout the other labs. These objects are as follows:
