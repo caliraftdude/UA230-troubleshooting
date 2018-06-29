@@ -83,7 +83,7 @@ This section we show a great tool for troubleshooting a policy that may
 have been reaching an ENDING DENY and closing the APM session too
 rapidly for proper inspection during the troubleshooting phase.
 
-STEP 1
+**STEP 1**
 
 |image71|
 
@@ -94,33 +94,33 @@ STEP 1
 
 |image72|
 
-1. After the Logon Page object, on the fallback branch, click the **+**
+2. After the Logon Page object, on the fallback branch, click the **+**
    symbol to open the Actions window.
 
 |image73|
 
-1. Click on the **General** **Purpose** tab and then click the radio
+3. Click on the **General** **Purpose** tab and then click the radio
    button next to **Message Box** and click the **ADD ITEM** button at
    the bottom of the page.
 
 |image74|
 
-1. Click the **SAVE** button on the next window
+4. Click the **SAVE** button on the next window
 
 |image75|
 
-1. Now client the ending Deny.
+5. Now client the ending Deny.
 
 |image76|
 
-1. In the pop-up window change it to Allow and click the **SAVE**
+6. In the pop-up window change it to Allow and click the **SAVE**
    button.
 
 |image77|
 
-1. Then click the Apply Access Policy link at the top left.
+7. Then click the Apply Access Policy link at the top left.
 
-TEST 1
+**TEST 1**
 
 |image78|
 
@@ -133,32 +133,32 @@ TEST 1
 
 |image79|
 
-1. Did we receive an error this time after the logon page?
+2. Did we receive an error this time after the logon page?
 
-2. Did the Message Box display?
+3. Did the Message Box display?
 
 |image80|
 
-1. Keep the message box display there and move to the other browser to
+4. Keep the message box display there and move to the other browser to
    review the Manage Sessions menu.
 
-2. Does the Manage Sessions menu show the Username this time?
+5. Does the Manage Sessions menu show the Username this time?
 
-3. Is the Status showing a Blue Square or Green Circle? Why?
+6. Is the Status showing a Blue Square or Green Circle? Why?
 
 |image81|
 
-1. Click the session ID to review the details for any new messages.
+7. Click the session ID to review the details for any new messages.
 
-2. If things worked correctly you should see a message in the details
+8. If things worked correctly you should see a message in the details
    stating, “Session deleted due to user inactivity or errors”
 
 |image82|
 
-1. If you look back at the other browser window you should notice a
+9. If you look back at the other browser window you should notice a
    Session Expired/Timeout message is being displayed.
 
-STEP 2
+**STEP 2**
 
 |image83|
 
@@ -167,21 +167,21 @@ STEP 2
 
 |image84|
 
-1. Access Policy Timeout from 30 seconds back to **300** seconds by
+2. Access Policy Timeout from 30 seconds back to **300** seconds by
    removing the check from the custom column.
 
-2. Click the **UPDATE** button at the bottom of the page.
+3. Click the **UPDATE** button at the bottom of the page.
 
 |image85|
 
-1. Click Apply Access Policy link at the top left of the page.
+4. Click Apply Access Policy link at the top left of the page.
 
 |image86|
 
-1. Finalize the update by confirming the box is checked next to the
+5. Finalize the update by confirming the box is checked next to the
    profile and clicking **APPLY ACESS POLICY**
 
-TEST 2
+**TEST 2**
 
 |image87|
 
@@ -189,40 +189,40 @@ TEST 2
 
 |image88|
 
-1. **Do NOT** click the message box link “Click here to continue”
+2. **Do NOT** click the message box link “Click here to continue”
 
-2. Leave the message box message displayed for the time.
+3. Leave the message box message displayed for the time.
 
 |image89|
 
-1. Go to the other browser/tab and open the Manage Sessions menu.
+4. Go to the other browser/tab and open the Manage Sessions menu.
 
-2. Your session should be there but the Status icon should still be a
+5. Your session should be there but the Status icon should still be a
    Blue Square.
 
-3. Click on your Session ID
+6. Click on your Session ID
 
 |image90|
 
-1. Click Built-in Reports
+7. Click Built-in Reports
 
 |image91|
 
-1. Click on All Sessions report, then choose Run Report on the pop-up
+8. Click on All Sessions report, then choose Run Report on the pop-up
    menu.
 
 |image92|
 
-1. Click the Session Variables for your current session.
+9. Click the Session Variables for your current session.
 
 |image93|
 
-1. Do you now have Session Variables being displayed for this session?
+10. Do you now have Session Variables being displayed for this session?
    If so why?
 
 |image94|
 
-1. Click the All Sessions tab and look at the column labeled Active.
+11. Click the All Sessions tab and look at the column labeled Active.
    Does it show a Y or N in the column?
 
 Note that session variables will only be displayed for Active sessions.
@@ -233,35 +233,35 @@ policies execution.
 
 |image95|
 
-1. Now in the user browser click the link in the Message Box.
+12. Now in the user browser click the link in the Message Box.
 
 If it timed out then restart and this time click through the message box
 link.
 
 |image96|
 
-1. Now review the Active Sessions menu and note what icon is shown in
+13. Now review the Active Sessions menu and note what icon is shown in
    the status column. Green Circle finally? Success!!
 
 |image97|
 
-1. If you now click the Session ID you will see that the Policy has
+14. If you now click the Session ID you will see that the Policy has
    reached an ending Allow thus the Access Policy Result is now showing
    we have been granted LTM+APM\_Mode access.
 
 |image98|
 
-1. Now open the All Sessions report once more to review the Session
+15. Now open the All Sessions report once more to review the Session
    Variables collected.
 
 |image99|
 
-1. Click the logon folder in the Session Variables page that opens for
+16. Click the logon folder in the Session Variables page that opens for
    your session.
 
 |image100|
 
-1. Click the folder icon named *last* to expand its contents.
+17. Click the folder icon named *last* to expand its contents.
 
 Notice on the left column labeled Variable Name above and to the right
 the next column is Variable Value and the third column is Variable ID.
@@ -313,7 +313,7 @@ APM Session Variable references are provided in APM documentation.
 Current release information can be found at the following link:
 https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-visual-policy-editor-13-0-0/5.html
 
-Partial Session Variable list
+**Partial Session Variable list**
 
 |image102|
 
@@ -363,7 +363,7 @@ Variables can be parsed, modified, manipulated, etc using TCL. Although
 the tables below are not an exhaustive reference for writing and using
 TCL expressions, it includes some common operators and syntax rules.
 
-Standard Operators
+**Standard Operators**
 
 You can use TCL standard operators with most BIG-IP® Access Policy
 Manager® rules. You can find a full list of these operators in the TCL
@@ -406,7 +406,7 @@ operators include:
 | **x?y:z**       | If-then-else, as in C. If x evaluates to non-zero, then the result is the value of y. Otherwise the result is the value of z. The x operand must have a boolean or numeric value.                                                                                                                                         |
 +-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Standard Operators
+**Standard Operators**
 
 A rule operator compares two operands in an expression. In addition to
 using the TCL standard operators, you can use the operators listed
@@ -430,7 +430,7 @@ below.
 | **switch**           | Evaluates one of several scripts, depending on a given value   |
 +----------------------+----------------------------------------------------------------+
 
-Logical Operators
+**Logical Operators**
 
 Logical operators are used to compare two values.
 
@@ -513,7 +513,7 @@ Session Variable Exercise
 The following are some exercises to demonstrate how session variables
 can be utilized.
 
-STEP 1
+**STEP 1**
 
 |image107|
 
@@ -522,18 +522,18 @@ STEP 1
 
 |image108|
 
-1. Edit the Message Box in the VPE.
+2. Edit the Message Box in the VPE.
 
 |image109|
 
-1. In the Message text box enter: **My username is:
+3. In the Message text box enter: **My username is:
    %{session.logon.last.username}** Then click the **Save** button
 
 |image110|
 
-1. Then click Apply Access Policy
+4. Then click Apply Access Policy
 
-TEST 1
+**TEST 1**
 
 |image111|
 
@@ -541,10 +541,10 @@ TEST 1
 
 |image112|
 
-1. When the message box appears, you should see a message stating,
+2. When the message box appears, you should see a message stating,
    “\ **My username is: student**\ ”. Was it successful?
 
-STEP 2
+**STEP 2**
 
 |image113|
 
@@ -554,27 +554,27 @@ STEP 2
 
 |image115|
 
-1. Add a Variable Assign action from the Assignment action tab and place
+2. Add a Variable Assign action from the Assignment action tab and place
    it before the Message Box action.
 
 |image116|
 
-1. When the properties screen opens, click the **Add New Entry** button.
+3. When the properties screen opens, click the **Add New Entry** button.
 
 |image117|
 
-1. Then click the “Change” link.
+4. Then click the “Change” link.
 
 |image118|
 
-1. A window will pop up with *Custom Variable* on the left and *Custom
+5. A window will pop up with *Custom Variable* on the left and *Custom
    Expression* on the right.
 
 You will notice both boxes are currently empty.
 
 |image119|
 
-1. Often you may forget how to start off with the variable name or the
+6. Often you may forget how to start off with the variable name or the
    expression so a trick you can use to get you started is first select
    a pre-defined variable on the left side and a AAA attribute on the
    right side and then reselect custom variable and custom expression.
@@ -584,35 +584,35 @@ You will notice both boxes are currently empty.
 
 |image120|
 
-1. On the Custom Variable side type: **session.custom.mynewvar** (Be
+7. On the Custom Variable side type: **session.custom.mynewvar** (Be
    sure to make it lowercase). On the Custom Expression side type:
    **mcget {session.user.clientip}** (There is a space between mcget and
    the { bracket)
 
-2. Click the **Finished** button.
+8. Click the **Finished** button.
 
 |image121|
 
-1. Click the **Save** button.
+9. Click the **Save** button.
 
 |image122|
 
-1. Click on the Message Box.
+10. Click on the Message Box.
 
 |image123|
 
-1. After the closing **}** bracket in the first line of the message
+11. After the closing **}** bracket in the first line of the message
    section add a space and then type **<br>**
 
-2. Then on the next line type, **My Client IP is: %{session.custom.mynewvar}**
+12. Then on the next line type, **My Client IP is: %{session.custom.mynewvar}**
 
-3. Then click the **Save** button.
+13. Then click the **Save** button.
 
 |image124|
 
-1. Then click Apply Access Policy.
+14. Then click Apply Access Policy.
 
-TEST 2
+**TEST 2**
 
 |image125|
 
@@ -621,14 +621,14 @@ TEST 2
 
 |image126|
 
-1. Does it display your client IP address?
+2. Does it display your client IP address?
 
 |image127|
 
-1. Now run the All Sessions Report and review the View Session Variables
+3. Now run the All Sessions Report and review the View Session Variables
    for the active SessionID. (Access Overview Access Reports)
 
-2. Notice the folder icon named custom and the corresponding Variable ID
+4. Notice the folder icon named custom and the corresponding Variable ID
    of session.custom. This was generated automatically during the
    Variable Assign action that you added to the policy. When you set the
    Custom Variable to session.custom.mynewvar APM used the next word
@@ -637,7 +637,7 @@ TEST 2
 
 |image128|
 
-1. If you expand custom folder you will notice a new Variable named
+5. If you expand custom folder you will notice a new Variable named
    mynewvar and in the next column you will see your client ip address
    and in the third column the variable id of session.custom.mynewvar
 
