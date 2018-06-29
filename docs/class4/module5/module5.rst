@@ -73,7 +73,7 @@ Informational temporarily while performing troubleshooting or debugging.
 We need to add some more actions to the APM Profile in the VPE we have
 been working with to go along with the next few lab tests.
 
-STEP 1
+**STEP 1**
 
 |image130|
 
@@ -82,17 +82,17 @@ STEP 1
 
 |image131|
 
-1. Navigate to the Authentication tab and select the AD Query radial and
+2. Navigate to the Authentication tab and select the AD Query radial and
    click **Add Item**.
 
 |image132|
 
-1. In the AD Query, use the drop-down dialog box on Server to select the
+3. In the AD Query, use the drop-down dialog box on Server to select the
    **/Common/LAB\_AD\_AAA** server. Click the **Save** button.
 
 |image133|
 
-1. On the top branch following the AD Query action, add another Message
+4. On the top branch following the AD Query action, add another Message
    Box.
 
 Hint: A Message Box can be added by clicking the **+** sign, navigating
@@ -100,7 +100,7 @@ to the General Purpose tab and selecting Message Box
 
 |image134|
 
-1. After the second Message Box add the AD Auth action from the
+5. After the second Message Box add the AD Auth action from the
    Authentication tab
 
 Hint: An AD Auth action can be added by clicking the **+** sign,
@@ -108,14 +108,14 @@ navigating to the Authentication tab and selecting AD Auth
 
 |image135|
 
-1. In the AD Auth properties window use the server drop-down menu to
+6. In the AD Auth properties window use the server drop-down menu to
    select **/Common/LAB\_AD\_AAA** server.
 
-2. Click the **Save** button.
+7. Click the **Save** button.
 
 |image136|
 
-1. Your policy should now look like this
+8. Your policy should now look like this
 
 Notice that one the top branch to the AD Query object the line reads
 User Primary Group ID is 100 (See graphic in Step 8 above, just after AD
@@ -126,48 +126,46 @@ following it in the policy or they could be deleted when you do not want
 them to be deleted. Here is a trick you can use to preserve the actions
 that follow the ad query when you need to delete a branch.
 
-STEP 1 Continued
-
 |image137|
 
-1. Just before the second Message Box after the “User Primary Group ID
+9. Just before the second Message Box after the “User Primary Group ID
    is 100” and after the **+** symbol there is a double arrow symbol.
    This will allow us to swap portions of the policy that come after
    that **->>-** double arrow to another location in the VPE policy.
 
 |image138|
 
-1. Click the **->>-** double arrow.
+10. Click the **->>-** double arrow.
 
 |image139|
 
-1. You will now notice a **vertical arrow** pointing to other locations
+11. You will now notice a **vertical arrow** pointing to other locations
    in the VPE where this section highlighted in green can be swapped.
 
-2. Click on the **Vertical Arrow**
+12. Click on the **Vertical Arrow**
 
 |image140|
 
-1. Now click the **AD Query** action in your policy and go to **Branch
+13. Now click the **AD Query** action in your policy and go to **Branch
    Rules** tab
 
-2. Click the **X** to the right in the gray box for the Branch Rule
+14. Click the **X** to the right in the gray box for the Branch Rule
 
-3. Click **Save** to save your settings
+15. Click **Save** to save your settings
 
 |image141|
 
-1. Your policy should now look like this. Now you can see how the Swap
+16. Your policy should now look like this. Now you can see how the Swap
    function can help with moving action objects throughout the VPE
 
 |image142|
 
-1. Click **Apply Access Policy** to save and implement or work
+17. Click **Apply Access Policy** to save and implement or work
 
 Now let’s see what can be seen in the logs when set at the default
 logging level of Notice.
 
-TEST 1
+**TEST 1**
 
 |image143|\ |image144|\ |image145|
 
@@ -180,15 +178,15 @@ TEST 1
 
 |image146|
 
-1. Logon to the BIGIP APM console using an SSH client (PuTTY from your
+4. Logon to the BIGIP APM console using an SSH client (PuTTY from your
    desktop). Select **agilitylab**  **Load**  **Open**
 
 |image147|
 
-1. Maximize your SSH window to reduce line wrapping when reviewing the
+5. Maximize your SSH window to reduce line wrapping when reviewing the
    logs from the CLI.
 
-2. From the CLI prompt, type **tail –f /var/log/apm** and hit **Enter**
+6. From the CLI prompt, type **tail –f /var/log/apm** and hit **Enter**
    so you can start see the logs being displayed
 
 |image148|
@@ -198,7 +196,7 @@ user **student**.
 
 |image149|
 
-1. Notice the logs being produced at the different stages of the users
+7. Notice the logs being produced at the different stages of the users
    session as it first reaches the VIP, then when the user
    authenticates, receives message boxes or other policy actions, and
    then when the user reaches the policy result.
@@ -220,7 +218,7 @@ Debug. You can use the GUI to make the log level changes to Debug or you
 could use the Traffic Management Shell (TMSH) command from the CLI to
 adjust the logging.
 
-STEP 1
+**STEP 1**
 
 |image150|
 
@@ -231,7 +229,7 @@ TIP: Make sure you change setting back to Notice when not
 troubleshooting. High levels of logging not only consume more disk
 space, but also consume other resources, such as CPU, when enabled.
 
-TEST 2
+**TEST 2**
 
 |image151|
 
@@ -272,7 +270,7 @@ the \|grep command to search for the “username”
 
 **sessiondump -allkeys \| grep ‘student’**
 
-STEP 1
+**STEP 1**
 
 |image154|
 
@@ -287,19 +285,19 @@ be displayed in the Reports screens if the User Session is not in an
 utility. There must be active sessions through APM in order to dump
 details.
 
-1. Once you are at the command prompt again try using the **sessiondump
+2. Once you are at the command prompt again try using the **sessiondump
    –allkeys** command first. Did you receive any data after running the
    command? If not, then why?
 
 |image156|
 
-1. If all your previous sessions have expired then startup and new
+3. If all your previous sessions have expired then startup and new
    session as a user and logon to APM and click through the message
    boxes.
 
 |image157|
 
-1. Now on the console type: **sessiondump –allkeys.** You should see a
+4. Now on the console type: **sessiondump –allkeys.** You should see a
    long list of information.
 
 |image158|
@@ -311,7 +309,7 @@ the command to be returned
 Now let us have some fun with using this utility to help with SSO
 troubleshooting/validation.
 
-STEP 2
+**STEP 2**
 
 |image159|
 
@@ -320,37 +318,37 @@ STEP 2
 
 |image160|
 
-1. Add two new actions to the policy after the AD Auth on the successful
+2. Add two new actions to the policy after the AD Auth on the successful
    branch.
 
 |image161|
 
-1. First after AD Auth add the SSO Credential Mapping action from the
+3. First after AD Auth add the SSO Credential Mapping action from the
    Assignment Tab. Click **Add Item**
 
 |image162|
 
-1. Keep the default settings and click **Save**.
+4. Keep the default settings and click **Save**.
 
 |image163|
 
-1. Next add after the SSO Credential Mapping action add a Pool Assign
+5. Next add after the SSO Credential Mapping action add a Pool Assign
    action from the Assignment tab.
 
 |image164|
 
-1. In the next window click the **Add\\Delete** link.
+6. In the next window click the **Add\\Delete** link.
 
 |image165|
 
-1. Then select the radio button for **/Common/Agility-Lab-Pool**. Now
+7. Then select the radio button for **/Common/Agility-Lab-Pool**. Now
    click the **Save** button.
 
 |image166|
 
-1. Then click Apply Access Policy link on top left of page.
+8. Then click Apply Access Policy link on top left of page.
 
-TEST 2
+**TEST 2**
 
 |image167|
 
@@ -359,7 +357,7 @@ TEST 2
 
 |image168|
 
-1. This time instead of seeing a browser error you should be getting
+2. This time instead of seeing a browser error you should be getting
    prompted for authentication for a website which is the site being
    hosted on the pool member that we assigned to the policy. Why are we
    getting prompted for authentication though? Did we not add the SSO
@@ -367,7 +365,7 @@ TEST 2
 
 |image169|
 
-1. Let’s use the following command at the console to check if we are
+3. Let’s use the following command at the console to check if we are
    getting credentials mapped to token variables properly: **sessiondump
    –allkeys \| grep ‘sso**\ ’ You should see two lines that show
    something like this following picture.
@@ -376,7 +374,7 @@ If you see the two lines with session.sso.token.last, then we know the
 credential mapping is happening and the username should be displayed
 accordingly. So what’s missing?
 
-STEPS
+**STEP 3**
 
 |image170|
 
@@ -385,25 +383,25 @@ STEPS
 
 |image171|
 
-1. In the list of access profiles, click the NAME of your access
+2. In the list of access profiles, click the NAME of your access
    profile, **Agility-LAB-Access-Profile**
 
 |image172|
 
-1. When this page opens, look at the top, there are four tabs, click the
+3. When this page opens, look at the top, there are four tabs, click the
    **SSO / Auth Domains** tab
 
 |image173|
 
-1. On this page, use the drop down menu on the SSO Configuration row to
+4. On this page, use the drop down menu on the SSO Configuration row to
    select **Agility\_Lab\_SSO\_NTLM**. Then click Update
 
 |image174|
 
-1. Then click **Apply Access Policy** on the top left of the page and
+5. Then click **Apply Access Policy** on the top left of the page and
    apply the policy on the next page.
 
-TEST 3
+**TEST 3**
 
 |image175|
 
@@ -416,7 +414,7 @@ Selected Sessions
 
 |image176|
 
-1. Now what do you see when the policy has completed? Are you seeing the
+2. Now what do you see when the policy has completed? Are you seeing the
    web application without being prompted for an additional logon prompt
    from the application? If so, then you were successful.
 
@@ -428,7 +426,7 @@ in verifying proper authentication and query capabilities to an Active
 Directory domain. We need to prepare for this lab by making a quick
 change to the BIGIP’s configuration.
 
-STEP 1
+**STEP 1**
 
 |image177|
 
@@ -459,7 +457,7 @@ The ADTest tool can help point out potential issues with a BIG-IP’s
 configuration or interoperability issues on the server’s side.
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-| cOMMON ERRORS                                                                                                                                                                                                                                                  |                                                                                          |
+| COMMON ERRORS                                                                                                                                                                                                                                                  |                                                                                          |
 +================================================================================================================================================================================================================================================================+==========================================================================================+
 | ERROR: query with '(sAMAccountName=student)' failed in krb5\_get\_init\_creds\_password(): Preauthentication failed, principal name: administrator@agilitylab.com (-1765328360)                                                                                | The cause of this is simply failed administrative credentials while attempting a query   |
 |                                                                                                                                                                                                                                                                |                                                                                          |
@@ -475,7 +473,7 @@ regarding the options of ADTest.
 
 |image181|
 
-Test 1
+**TEST 1**
 
 |image182|
 
@@ -485,26 +483,26 @@ Test 1
 
 |image183|
 
-1. Review the session details for this logon session in reports or
+2. Review the session details for this logon session in reports or
    manage sessions. As we can see from the session details the AD Query
    is failing as well as AD Auth
 
 |image184|
 
-1. Now we can test from the console. Open a console/ssh session. Using
+3. Now we can test from the console. Open a console/ssh session. Using
    the following command let us first test authentication using the
    ADtest utility. **adtest -t auth -r "agilitylab.com" -u student -w
    password**. What result did you get with that test?
 
 |image185|
 
-1. Now let’s try a query test. **adtest -t query -r "agilitylab.com" -A
+4. Now let’s try a query test. **adtest -t query -r "agilitylab.com" -A
    Administrator -W adminpass -u student -w password**. What result was
    returned?
 
 |image186|
 
-1. Go back to the DNS Settings section and re-add the DNS server IP and
+5. Go back to the DNS Settings section and re-add the DNS server IP and
    domain. Then re-test the Auth and Query using the ADtest utility.
 
 iRules Logging Assistance
@@ -550,7 +548,7 @@ the correct information is being keyed by user, received by APM and sent
 from APM to servers. Fortunately, there is a way using an iRule to do
 just this for our troubleshooting purpose.
 
-TEST 1
+**TEST 1**
 
 1.  First open a console session to the BIGIP.
 
@@ -590,7 +588,7 @@ An iRule has been created already and supplied for you so you won’t need
 to create it yourself you only need to apply it to the Virtual Server
 under the Resources Tab.
 
-STEP 2
+**STEP 2**
 
 1. Open the properties for the Virtual Server.
 
@@ -606,7 +604,7 @@ STEP 2
 
 6. Click the finished button.
 
-TEST 2
+**TEST 2**
 
 1. Navigate to Manage Sessions and Kill all existing sessions.
 

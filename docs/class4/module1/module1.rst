@@ -42,13 +42,13 @@ DNS Resolver for System Configuration
 
 |image3|
 
-1. In the Properties Section for DNS Lookup Server List, enter
+2. In the Properties Section for DNS Lookup Server List, enter
    **10.128.20.100** in the Address field and click the **ADD** button.
 
-2. Scroll down to the DNS Search Domain List section and enter
+3. Scroll down to the DNS Search Domain List section and enter
    **agilitylab.com** in the Address field and click the **ADD** button.
 
-3. Click the **UPDATE** button at the bottom of the page to save the
+4. Click the **UPDATE** button at the bottom of the page to save the
    changes you just made.
 
 NTP Server for System Configuration
@@ -61,10 +61,10 @@ NTP Server for System Configuration
 
 |image5|
 
-1. In the Properties Section for Time Server List, enter
+2. In the Properties Section for Time Server List, enter
    **10.128.20.100** in the Address field and click the **ADD** button.
 
-2. Click the **UPDATE** button at the bottom of the page to save the
+3. Click the **UPDATE** button at the bottom of the page to save the
    changes you just made.
 
 Access Policy (APM) AAA Server – Active Directory Object Creation
@@ -77,21 +77,21 @@ Access Policy (APM) AAA Server – Active Directory Object Creation
 
 |image7|
 
-1. Click the **CREATE** button on right side of page.
+2. Click the **CREATE** button on right side of page.
 
 |image8|
 
-1. Under General Properties type **LAB\_AD\_AAA** in the name field.
+3. Under General Properties type **LAB\_AD\_AAA** in the name field.
 
-2. In the Configuration Section, Click the radio button option next to
+4. In the Configuration Section, Click the radio button option next to
    **Direct** in the Server Connection row.
 
-3. In the Domain Name field enter **agilitylab.com**
+5. In the Domain Name field enter **agilitylab.com**
 
-4. Leave the Domain Controller, Admin Name and Admin Password fields
+6. Leave the Domain Controller, Admin Name and Admin Password fields
    blank for now.
 
-5. Click the **FINISHED** button at the bottom of the page to save your
+7. Click the **FINISHED** button at the bottom of the page to save your
    changes.
 
 Access Policy (APM) SSO Configuration – NTLMv1
@@ -104,13 +104,13 @@ Access Policy (APM) SSO Configuration – NTLMv1
 
 |image10|
 
-1. Click the **CREATE** button on the right side of the page.
+2. Click the **CREATE** button on the right side of the page.
 
 |image11|
 
-1. In the Name field enter **Agility\_Lab\_SSO\_NTLM**
+3. In the Name field enter **Agility\_Lab\_SSO\_NTLM**
 
-2. Click the **FINISHED** button at the bottom.
+4. Click the **FINISHED** button at the bottom.
 
 Access Policy (APM) Access Profile Creation
 -------------------------------------------
@@ -122,29 +122,29 @@ Access Policy (APM) Access Profile Creation
 
 |image13|
 
-1. Click the **CREATE** button on the right side of the page.
+2. Click the **CREATE** button on the right side of the page.
 
 |image14|
 
-1. In the Name field enter, **Agility-Lab-Access-Profile**
+3. In the Name field enter, **Agility-Lab-Access-Profile**
 
-2. In the Profile Type drop down list select **All**
+4. In the Profile Type drop down list select **All**
 
-3. **In the Profile Scope drop down list select Profile**
+5. **In the Profile Scope drop down list select Profile**
 
 |image15|
 
-1. In the Settings section click the checkbox to the right of Access
+6. In the Settings section click the checkbox to the right of Access
    Policy Timeout and change the value from 300, to **30**, seconds.
 
 |image16|
 
-1. Scroll the bottom of the page and in the Language Settings section,
+7. Scroll the bottom of the page and in the Language Settings section,
    click to highlight **English** in the Factory Builtin Languages box,
    then click the left **<<** arrows to move it to the left box labeled
    Accepted Languages.
 
-2. Click the **FINISHED** button at the bottom of the page to save your
+8. Click the **FINISHED** button at the bottom of the page to save your
    changes.
 
 Local Traffic (LTM) Pool and Member Creation
@@ -157,21 +157,21 @@ Local Traffic (LTM) Pool and Member Creation
 
 |image18|
 
-1. Click the **CREATE** button on the right side of the page.
+2. Click the **CREATE** button on the right side of the page.
 
 |image19|
 
-1. In the Name field enter **Agility-Lab-Pool**
+3. In the Name field enter **Agility-Lab-Pool**
 
-2. In the Resources section, in the New Members area, enter
+4. In the Resources section, in the New Members area, enter
    **10.128.20.100** in the Address field.
 
-3. In the Service Port field, enter **80**, or select **HTTP** from the
+5. In the Service Port field, enter **80**, or select **HTTP** from the
    drop-down menu.
 
-4. Click the **ADD** button
+6. Click the **ADD** button
 
-5. Click the **FINISHED** button at the bottom to save your changes.
+7. Click the **FINISHED** button at the bottom to save your changes.
 
 Local Traffic (LTM) Virtual Server Creation
 -------------------------------------------
@@ -188,40 +188,40 @@ users.
 
 |image21|
 
-1. Click the **CREATE** button on the right side of the page.
+2. Click the **CREATE** button on the right side of the page.
 
 |image22|
 
-1. Under the General Properties section, in the Name field enter
+3. Under the General Properties section, in the Name field enter
    **Agility-LTM-VIP**
 
-2. In the Destination Address field enter **10.128.10.100**
+4. In the Destination Address field enter **10.128.10.100**
 
-3. In the Service Port fields enter **443**, or select **HTTPS** from
+5. In the Service Port fields enter **443**, or select **HTTPS** from
    the drop-down menu
 
 |image23|
 
-1. Under the Configuration section, in the HTTP Profile field use the
+6. Under the Configuration section, in the HTTP Profile field use the
    drop-down menu to select **http**
 
-2. In the SSL Profile (Client) field select **clientssl** from the
+7. In the SSL Profile (Client) field select **clientssl** from the
    Available profiles then use the **<<** left arrows to move it to the
    Selected box.
 
-3. Ensure VLAN and Tunnel Traffic is set to **All VLANs and Tunnels**
+8. Ensure VLAN and Tunnel Traffic is set to **All VLANs and Tunnels**
 
-4. In the Source Address Translation field select **Auto Map** from the
+9. In the Source Address Translation field select **Auto Map** from the
    drop-down menu.
 
 |image24|
 
-1. Scroll down to the Access Profile section, select
+10. Scroll down to the Access Profile section, select
    **Agility-Lab-Access-Profile** from the drop-down menu.
 
 |image25|
 
-1. Click the **FINISHED** button to save your changes.
+11. Click the **FINISHED** button to save your changes.
 
 
 .. |image1| image:: /_static/class4/image3.png

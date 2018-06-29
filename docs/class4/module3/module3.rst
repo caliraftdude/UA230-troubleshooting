@@ -56,41 +56,42 @@ Perform the following steps to verify DNS is correctly configured:
 
 |image27|
 
-1. Click on the **agilitylab** Saved Session and click Load
+2. Click on the **agilitylab** Saved Session and click Load
 
-2. The click on **OPEN**
+3. The click on **OPEN**
 
 Alternatively, you can simply double-click on the **agilitylab** Saved
 Session to open the session
 
 |image28|
 
-1. Logon as **root** with password **default** if necessary (you should
+4. Logon as **root** with password **default** if necessary (you should
    logon automatically)
 
 |image29|
 
-1. From the CLI type **dig agilitylab.com** and then press enter
+5. From the CLI type **dig agilitylab.com** and then press enter
 
-2. The following results should be reviewed and verified.
+6. The following results should be reviewed and verified.
 
-3. If DNS is properly configured you should receive the returned IP
+7. If DNS is properly configured you should receive the returned IP
    address of **10.128.20.100**
 
 |image30|
 
-1. From the CLI type **nslookup** and then press enter.
+8. From the CLI type **nslookup** and then press enter.
 
-2. Type **agilitylab.com** and then press enter
+9. Type **agilitylab.com** and then press enter
 
-3. The following results should be reviewed and verified.
+10. The following results should be reviewed and verified.
 
-4. If DNS is properly configured you should receive the returned IP
+11. If DNS is properly configured you should receive the returned IP
    address of **10.128.20.100**
 
-5. Exit nslookup by typing **exit**
+12. Exit nslookup by typing **exit**
 
-\ **Verify NTP is setup from the CLI of the BIGIP**
+Verify NTP is setup from the CLI of the BIGIP
+---------------------------------------------
 
 Perform the following steps to verify NTP is correctly configured:
 
@@ -103,7 +104,7 @@ Perform the following steps to verify NTP is correctly configured:
 
 |image32|
 
-1. | If time is out of sync by too much of an offset you can update the
+3. | If time is out of sync by too much of an offset you can update the
      local time using the following command:
    | **date MMDDhhmmYYYY**
 
@@ -114,7 +115,7 @@ We use the Manage Sessions menu to view general status of currently
 logged in sessions, view their progress through a policy, and to kill
 sessions when needed.
 
-STEP 1
+**STEP 1**
 
 |image33|
 
@@ -124,10 +125,10 @@ STEP 1
 
 |image34|
 
-1. Did you receive an error message? If so, take note of the Session
+2. Did you receive an error message? If so, take note of the Session
    Reference Number
 
-TEST 1
+**TEST 1**
 
 |image35|
 
@@ -137,7 +138,7 @@ TEST 1
 2. Review the Manage Sessions screen, is there an Active Session? If not
    then why?
 
-STEP 2
+**STEP 2**
 
 |image36|
 
@@ -147,13 +148,13 @@ STEP 2
 
 |image37|
 
-1. Then click the Edit link in the row that has the name of your Access
+2. Then click the Edit link in the row that has the name of your Access
    Profile you are working with currently.
    (**Agility-Lab-Access-Profile**)
 
 |image38|
 
-1. This will either launch a new browser or new tab depending on your
+3. This will either launch a new browser or new tab depending on your
    browsers settings to display the APM Visual Policy Editor (VPE). The
    first policy we created was never edited to add any additional tasks
    that would instruct APM on what Actions it would need to take/enforce
@@ -162,25 +163,25 @@ STEP 2
 
 |image39|
 
-1. Click on the **+** symbol between the Start and ending Deny objects.
+4. Click on the **+** symbol between the Start and ending Deny objects.
 
 |image40|
 
-1. This will pop up the Actions window where we can select from several
+5. This will pop up the Actions window where we can select from several
    Actions we wish to associate with our policy. On the Logon tab select
    the **Logon Page** radio button and then click the **ADD ITEM**
    button at the bottom of the page.
 
 |image41|
 
-1. Click the **SAVE** button on the Logon Page properties window.
+6. Click the **SAVE** button on the Logon Page properties window.
 
 |image42|
 
-1. Then click the **Apply Access Policy** link on the top left of the
+7. Then click the **Apply Access Policy** link on the top left of the
    page.
 
-TEST 2
+**TEST 2**
 
 |image43|
 
@@ -188,47 +189,47 @@ TEST 2
 
 |image44|
 
-1. Did you receive and error this time? Or did you receive a Logon Page?
+2. Did you receive and error this time? Or did you receive a Logon Page?
 
 |image45|
 
-1. Open your browser or tab for managing APM and open the Active
+3. Open your browser or tab for managing APM and open the Active
    Sessions menu again.
 
-2. Is there now an Active Session displayed on the page? If you were
+4. Is there now an Active Session displayed on the page? If you were
    already on this page you may need to click the Refresh Session Table
    button.
 
-3. What does the Status Icon look like? Is it a Green Circle or a Blue
+5. What does the Status Icon look like? Is it a Green Circle or a Blue
    Square?
 
-4. Is your username displayed in the Logon column?
+6. Is your username displayed in the Logon column?
 
-5. Click on the Session ID for your session, this will open up a Session
+7. Click on the Session ID for your session, this will open up a Session
    Details window.
 
 |image46|
 
-1. In the Session Details window, we can see some information about the
+8. In the Session Details window, we can see some information about the
    session up to the point that the policy has executed so far.
 
 |image47|
 
-1. Further down there is a reports section titled **Built-In Reports**,
+9. Further down there is a reports section titled **Built-In Reports**,
    click that to open the list of built in reports.
 
 |image48|
 
-1. Scroll down to see the list of **Session Reports** and click the
+10. Scroll down to see the list of **Session Reports** and click the
    **Current Sessions** line and select **Run Report** from the pop up
    window.
 
 |image49|
 
-1. Do you see your Session ID displayed in the list of current sessions?
+11. Do you see your Session ID displayed in the list of current sessions?
    If not then why?
 
-TEST 3
+**TEST 3**
 
 |image50|
 
@@ -242,33 +243,33 @@ TEST 3
 
 |image51|
 
-1. Did you receive and error after logging on? If so note the Session
+3. Did you receive and error after logging on? If so note the Session
    Reference Number.
 
 |image52|
 
-1. Review the Manage Sessions menu, is your session listed?
+4. Review the Manage Sessions menu, is your session listed?
 
 |image53|
 
-1. Navigate to Access -> Overview  Access Reports. When prompted Click
+5. Navigate to Access -> Overview  Access Reports. When prompted Click
    Run Report.
 
 |image54|
 
-1. Do you see your Session ID listed in the list of All Sessions? Is the
+6. Do you see your Session ID listed in the list of All Sessions? Is the
    username listed in the Logon column?
 
 |image55|
 
-1. Click the Session ID to open the Session Details window.
+7. Click the Session ID to open the Session Details window.
 
-2. Do you now see more information in this Sessions Details compared to
+8. Do you now see more information in this Sessions Details compared to
    the previous one we reviewed?
 
-3. Is the username listed in the details?
+9. Is the username listed in the details?
 
-4. In the Session Details screen we can see some important
+10. In the Session Details screen we can see some important
    troubleshooting information, for example just below the username row
    we see a line that states that the Policy followed a path or branch
    called Fallback out of the Logon Page object to an Ending “Deny” thus
@@ -276,15 +277,15 @@ TEST 3
 
 |image56|
 
-1. Now click back on the All Sessions tab at the top.
+11. Now click back on the All Sessions tab at the top.
 
-2. In the row for this session look to the right of the Logon column.
+12. In the row for this session look to the right of the Logon column.
    You will see the next column states that the session is not Active.
    Now click the View Session Variables link in the next column.
 
 |image57|
 
-1. Do you see a lot of information recorded for Session Variables for
+13. Do you see a lot of information recorded for Session Variables for
    this session? If not, then why?
 
 .. |image26| image:: /_static/class4/image33.png

@@ -116,8 +116,6 @@ Access Policy (APM) SSO Configuration – NTLMv1 (TMSH)
 
    **list apm sso**
 
-   You should see the following reply:
-|image253|
 
 Access Policy (APM) Access Profile Creation (TMSH)
 --------------------------------------------------
@@ -150,8 +148,6 @@ Access Policy (APM) Access Profile Creation (TMSH)
 
    **list apm profile**
 
-   You should see the following reply:
-|image254|
 
 Local Traffic (LTM) Pool and Member Creation (TMSH)
 ---------------------------------------------------
@@ -169,9 +165,6 @@ Local Traffic (LTM) Pool and Member Creation (TMSH)
 
    **list ltm pool**
 
-   You should see the following reply:
-|image255|
-
 Local Traffic (LTM) Virtual Server Creation (TMSH)
 --------------------------------------------------
 1. To configure a virtual server, use the following command syntax:
@@ -188,8 +181,6 @@ Local Traffic (LTM) Virtual Server Creation (TMSH)
 
    **list ltm virtual**
 
-4. You should see the following reply:
-|image256|
 
 .. |image1| image:: /_static/class4/image3.png
    :width: 5.30000in
