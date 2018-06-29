@@ -42,8 +42,6 @@ as illustrated in the diagram below:
 LAB Environment Diagram
 -----------------------
 
-.. todo:: update diagram with correct components, IP addresses. Remove BIG-IP version.
-
 |image0|
 
 Lab Components
