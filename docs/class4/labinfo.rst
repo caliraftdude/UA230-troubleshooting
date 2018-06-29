@@ -56,8 +56,6 @@ The following components have been included in your lab environment:
 
 The following table lists VLANS, IP Addresses and Credentials for all components:
 
-.. todo:: Check/correct IP addresses and credentials.
-
 .. list-table::
     :widths: 20 40 40
     :header-rows: 1
