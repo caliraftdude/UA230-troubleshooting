@@ -1,7 +1,8 @@
 Lab 1: APM Troubleshooting Lab Object Preparation (GUI)
 =======================================================
 
-*Note:  You only need to perform EITHER Lab 1 OR Lab 2.  They accomplish the same goal, but using different methods.  Lab 2 gets the Lab Preparation using TMSH*
+.. NOTE::
+   You only need to perform EITHER Lab 1 OR Lab 2.  They accomplish the same goal, but using different methods.  Lab 2 gets the Lab Preparation using TMSH
 
 The purpose of this lab is to preconfigure some objects that will be
 used throughout the other labs. These objects are as follows:
@@ -216,8 +217,7 @@ users.
 
 |image24|
 
-10. Scroll down to the Access Profile section, select
-   **Agility-Lab-Access-Profile** from the drop-down menu.
+10. Scroll down to the Access Profile section, select **Agility-Lab-Access-Profile** from the drop-down menu.
 
 |image25|
 
