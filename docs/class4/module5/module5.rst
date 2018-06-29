@@ -57,10 +57,8 @@ minimum severity level or log level, that you want the system to report
 when a type of event occurs. The minimum log level indicates the minimum
 severity level at which the system logs that type of event.
 
-***Note: Files are rotated daily if their file size exceeds 10MB.
-Additionally, weekly rotations are enforced if the rotated log file is a
-week old, regardless whether or not the file exceeds the 10MB
-threshold.***
+.. NOTE::
+  Files are rotated daily if their file size exceeds 10MB. Additionally, weekly rotations are enforced if the rotated log file is a week old, regardless whether or not the file exceeds the 10MB threshold.
 
 The **default** log level for the BIG-IP APM access policy log is
 **Notice**, which does ***not*** log Session Variables. Setting the
@@ -155,8 +153,7 @@ that follow the ad query when you need to delete a branch.
 
 |image141|
 
-16. Your policy should now look like this. Now you can see how the Swap
-   function can help with moving action objects throughout the VPE
+16. Your policy should now look like this. Now you can see how the Swap function can help with moving action objects throughout the VPE
 
 |image142|
 
@@ -167,7 +164,11 @@ logging level of Notice.
 
 **TEST 1**
 
-|image143|\ |image144|\ |image145|
+|image143|
+
+|image144|
+
+|image145|
 
 1. Review the current Access Policy Logging (Access  Overview  Event
    Logs -> Settings)
@@ -179,7 +180,7 @@ logging level of Notice.
 |image146|
 
 4. Logon to the BIGIP APM console using an SSH client (PuTTY from your
-   desktop). Select **agilitylab**  **Load**  **Open**
+   desktop). Select **agilitylab** > **Load** > **Open**
 
 |image147|
 
@@ -430,7 +431,7 @@ change to the BIGIP’s configuration.
 
 |image177|
 
-1. Navigate to System  Configuration  Device  DNS
+1. Navigate to System > Configuration > Device  DNS
 
 2. Highlight **10.128.10.100** in the DNS Lookup Server List and click
    **Delete**.
