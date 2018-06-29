@@ -11,7 +11,7 @@ we strived to derive an estimate among several people each having a
 different level of experience. Below is an estimate of how long it will
 take for each lab:
 
-LAB Timing
+**LAB Timing**
 
 +---------------------------------------------------------+------------------+
 | LAB Name (Description)                                  | Time Allocated   |
@@ -48,4 +48,4 @@ necessary at the beginning of each section for prior labs. You can
 install the UCS archive by using the \ **tmsh** **no-license** option. For
 the command syntax, refer to the following example:
 
-    tmsh load sys ucs [ucs file name] no-license
+    ``tmsh load sys ucs [ucs file name] no-license``
