@@ -221,7 +221,7 @@ users.
 
 |image25|
 
-1. Click the **FINISHED** button to save your changes.
+11. Click the **FINISHED** button to save your changes.
 
 
 .. |image1| image:: /_static/class4/image3.png
