@@ -132,7 +132,7 @@ TEST 1
 |image35|
 
 1. In the browser window, you are using to manage the BIG-IP, navigate
-   to Access  Active Sessions menu.
+   to Access  Overview > Active Sessions menu.
 
 2. Review the Manage Sessions screen, is there an Active Session? If not
    then why?
