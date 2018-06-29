@@ -56,8 +56,6 @@ The following components have been included in your lab environment:
 
 The following table lists VLANS, IP Addresses and Credentials for all components:
 
-.. todo:: Check/correct IP addresses and credentials.
-
 .. list-table::
     :widths: 20 40 40
     :header-rows: 1
@@ -67,19 +65,18 @@ The following table lists VLANS, IP Addresses and Credentials for all components
       - **VLAN/IP Address(es)**
       - **Credentials**
     * - Jump Host
-      - - **Management:** 10.1.1.1
-        - **Internal:** 10.1.20.1
-        - **External:** 10.1.10.1
-      - ``user``/``????``
+      - - **Management:** 10.128.1.1
+        - **Internal:** 10.128.20.1
+        - **External:** 10.128.10.1
+      - ``agility``/``Agility1``
     * - BIG-IP VE
-      - - **Management:** 10.1.1.245
-        - **Internal:** 10.1.20.245
-        - **External:** 10.1.10.245
+      - - **Management:** 10.128.1.245
+        - **Internal:** 10.118.20.245
+        - **External:** 10.118.10.245
       - ``admin``/``admin``
     * - Lab Server
-      - - **Management:** 10.1.1.100 <-- may need to be added to BP
-        - **Internal:** 10.1.20.100
-      - ``administrator``/``?????``
+      - - **Internal:** 10.128.20.100
+      - ``Administrator``/``none``
 
 .. |image0| image:: /_static/class4/image2.png
 	 :width: 6.48475in
