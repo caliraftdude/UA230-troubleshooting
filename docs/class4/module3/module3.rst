@@ -83,8 +83,7 @@ Session to open the session
 
 10. The following results should be reviewed and verified.
 
-11. If DNS is properly configured you should receive the returned IP
-   address of **10.128.20.100**
+11. If DNS is properly configured you should receive the returned IP address of **10.128.20.100**
 
 12. Exit nslookup by typing **exit**
 
