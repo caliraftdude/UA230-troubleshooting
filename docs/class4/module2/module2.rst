@@ -21,21 +21,14 @@ Connect to the Lab via SSH
 
 1. Establish an RDP connection to your Jump Host and double-click on the
    **BIG-IP** Chrome shortcut on the Windows desktop.
-
    -  User: agility
    -  Password: Agility1
-
 2. Ignore the certificate warning.
-
 3. Login into the BIG-IP via SSH using putty and the following credentials:
-
-   -  User: **root**
-   -  Password: **default**
-
+   -  User: root
+   -  Password: default
 4. Log in to tmsh by typing the following command:
-
    **tmsh**
-
 
 DNS Resolver for System Configuration (TMSH)
 --------------------------------------------
@@ -120,7 +113,9 @@ Access Policy (APM) SSO Configuration – NTLMv1 (TMSH)
 Access Policy (APM) Access Profile Creation (see GUI steps)
 --------------------------------------------------
 
-In order to gain familiarity with the Visual Policy Editor, please follow the GUI method of Access Policy creation: https://ua230-troubleshooting-2018-dev.readthedocs.io/en/latest/class4/module1/module1.html#access-policy-apm-access-profile-creation
+.. NOTE::
+   In order to gain familiarity with the Visual Policy Editor, please follow the GUI method of Access Policy creation: 
+   https://ua230-troubleshooting-2018-dev.readthedocs.io/en/latest/class4/module1/module1.html#access-policy-apm-access-profile-creation
 
 Local Traffic (LTM) Pool and Member Creation (TMSH)
 ---------------------------------------------------
