@@ -65,8 +65,7 @@ Session to open the session
 
 |image28|
 
-4. Logon as **root** with password **default** if necessary (you should
-   logon automatically)
+4. Logon as **root** with password **default** if necessary (you should logon automatically)
 
 |image29|
 
@@ -74,8 +73,7 @@ Session to open the session
 
 6. The following results should be reviewed and verified.
 
-7. If DNS is properly configured you should receive the returned IP
-   address of **10.128.20.100**
+7. If DNS is properly configured you should receive the returned IP address of **10.128.20.100**
 
 |image30|
 
@@ -220,14 +218,11 @@ sessions when needed.
 
 |image48|
 
-10. Scroll down to see the list of **Session Reports** and click the
-   **Current Sessions** line and select **Run Report** from the pop up
-   window.
+10. Scroll down to see the list of **Session Reports** and click the **Current Sessions** line and select **Run Report** from the pop up window.
 
 |image49|
 
-11. Do you see your Session ID displayed in the list of current sessions?
-   If not then why?
+11. Do you see your Session ID displayed in the list of current sessions? If not then why?
 
 **TEST 3**
 
@@ -269,24 +264,17 @@ sessions when needed.
 
 9. Is the username listed in the details?
 
-10. In the Session Details screen we can see some important
-   troubleshooting information, for example just below the username row
-   we see a line that states that the Policy followed a path or branch
-   called Fallback out of the Logon Page object to an Ending “Deny” thus
-   the Access Policy Result was Logon\_Deny.
+10. In the Session Details screen we can see some important troubleshooting information, for example just below the username row we see a line that states that the Policy followed a path or branch called Fallback out of the Logon Page object to an Ending “Deny” thus the Access Policy Result was Logon\_Deny.
 
 |image56|
 
 11. Now click back on the All Sessions tab at the top.
 
-12. In the row for this session look to the right of the Logon column.
-   You will see the next column states that the session is not Active.
-   Now click the View Session Variables link in the next column.
+12. In the row for this session look to the right of the Logon column. You will see the next column states that the session is not Active. Now click the View Session Variables link in the next column.
 
 |image57|
 
-13. Do you see a lot of information recorded for Session Variables for
-   this session? If not, then why?
+13. Do you see a lot of information recorded for Session Variables for this session? If not, then why?
 
 .. |image26| image:: /_static/class4/image33.png
    :width: 1.33004in
