@@ -42,7 +42,7 @@ are.
 This table provides a visual dictionary for the Visual Policy Editor
 (VPE).
 
-Visual Policy Editor (VPE) Visual Dictionary
+**Visual Policy Editor (VPE) Visual Dictionary**
 
 +--------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | Element type                               | Description                                                                                                                                                                                                                                                           | Visual element   |
@@ -127,9 +127,9 @@ rapidly for proper inspection during the troubleshooting phase.
 1. Return to the browser or tab you are using for access to
    **https://10.128.10.100**. Restart a new session if necessary.
 
--  Username: **student**
+  -  Username: **student**
 
--  Password: **password**
+  -  Password: **password**
 
 |image79|
 
@@ -197,8 +197,7 @@ rapidly for proper inspection during the troubleshooting phase.
 
 4. Go to the other browser/tab and open the Manage Sessions menu.
 
-5. Your session should be there but the Status icon should still be a
-   Blue Square.
+5. Your session should be there but the Status icon should still be a Blue Square.
 
 6. Click on your Session ID
 
@@ -208,8 +207,7 @@ rapidly for proper inspection during the troubleshooting phase.
 
 |image91|
 
-8. Click on All Sessions report, then choose Run Report on the pop-up
-   menu.
+8. Click on All Sessions report, then choose Run Report on the pop-up menu.
 
 |image92|
 
@@ -217,13 +215,11 @@ rapidly for proper inspection during the troubleshooting phase.
 
 |image93|
 
-10. Do you now have Session Variables being displayed for this session?
-   If so why?
+10. Do you now have Session Variables being displayed for this session? If so why?
 
 |image94|
 
-11. Click the All Sessions tab and look at the column labeled Active.
-   Does it show a Y or N in the column?
+11. Click the All Sessions tab and look at the column labeled Active. Does it show a Y or N in the column?
 
 Note that session variables will only be displayed for Active sessions.
 Since you placed a message box in the VPE to pause policy execution the
@@ -240,24 +236,19 @@ link.
 
 |image96|
 
-13. Now review the Active Sessions menu and note what icon is shown in
-   the status column. Green Circle finally? Success!!
+13. Now review the Active Sessions menu and note what icon is shown in the status column. Green Circle finally? Success!!
 
 |image97|
 
-14. If you now click the Session ID you will see that the Policy has
-   reached an ending Allow thus the Access Policy Result is now showing
-   we have been granted LTM+APM\_Mode access.
+14. If you now click the Session ID you will see that the Policy has reached an ending Allow thus the Access Policy Result is now showing we have been granted LTM+APM\_Mode access.
 
 |image98|
 
-15. Now open the All Sessions report once more to review the Session
-   Variables collected.
+15. Now open the All Sessions report once more to review the Session Variables collected.
 
 |image99|
 
-16. Click the logon folder in the Session Variables page that opens for
-   your session.
+16. Click the logon folder in the Session Variables page that opens for your session.
 
 |image100|
 
@@ -481,7 +472,7 @@ Using iRules
 
 In all the “Access” events
 
-ACCESS::session data get/set “variable\_name” [“value”]
+    ``ACCESS::session data get/set “variable\_name” [“value”]``
 
 Set Secure Variables
 ~~~~~~~~~~~~~~~~~~~~
@@ -601,8 +592,7 @@ You will notice both boxes are currently empty.
 
 |image123|
 
-11. After the closing **}** bracket in the first line of the message
-   section add a space and then type **<br>**
+11. After the closing **}** bracket in the first line of the message section add a space and then type **<br>**
 
 12. Then on the next line type, **My Client IP is: %{session.custom.mynewvar}**
 
