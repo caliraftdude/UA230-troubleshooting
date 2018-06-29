@@ -77,7 +77,7 @@ The following table lists VLANS, IP Addresses and Credentials for all components
         - **External:** 10.118.10.245
       - ``admin``/``admin``
     * - Lab Server
-        - **Internal:** 10.128.20.100
+      - - **Internal:** 10.128.20.100
       - ``Administrator``/``none``
 
 .. |image0| image:: /_static/class4/image2.png
