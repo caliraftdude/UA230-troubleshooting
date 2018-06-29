@@ -117,37 +117,10 @@ Access Policy (APM) SSO Configuration – NTLMv1 (TMSH)
    **list apm sso**
 
 
-Access Policy (APM) Access Profile Creation (TMSH)
+Access Policy (APM) Access Profile Creation (see GUI steps)
 --------------------------------------------------
- .. todo:: Figure out and Fix! *this is BROKEN*
 
-1. To configure an Access Profile you will need to submit a transaction
-2. Configure as follows:
-
-   **tmsh create cli transaction**
-
-   **create apm policy agent ending-allow Agility-Lab-Access-Test-end-allow-ag {}**
-
-   **create apm policy agent ending-deny Agility-Lab-Access-Test-end-deny-ag {}** 
-
-   **create apm policy policy-item Agility-Lab-Access-Test-end-allow { agents add { Agility-Lab-Access-Test-end-allow-ag { type ending-allow } } caption Allow color 1 item-type ending }**
-
-   **create apm policy policy-item Agility-Lab-Access-Test-end-deny { agents add { Agility-Lab-Access-Test-end-deny-ag { type ending-deny } } caption Deny color 2 item-type ending }**
-
-   **create apm policy policy-item Agility-Lab-Access-Test-ent { caption Start color 1 rules { { caption  fallback next-item Agility-Lab-Access-Test-end-deny } } }**
-
-   **create apm policy access-policy Agility-Lab-Access-Test { default-ending Agility-Lab-Access-Test-end-deny items add { Agility-Lab-Access-Test-end-allow {} Agility-Lab-Access-Test-end-deny {} Agility-Lab-Access-Test-ent {} } start-item Agility-Lab-Access-Test-ent }**
-
-   **create apm profile access Agility-Lab-Access-Test { accept-languages add { en } access-policy Agility-Lab-Access-Test }**
-
-   **submit cli transaction**
-
-   **save sys config**
-
-3. To verify, use the following command:
-
-   **list apm profile**
-
+In order to gain familiarity with the Visual Policy Editor, please follow the GUI method of Access Policy creation: https://ua230-troubleshooting-2018-dev.readthedocs.io/en/latest/class4/module1/module1.html#access-policy-apm-access-profile-creation
 
 Local Traffic (LTM) Pool and Member Creation (TMSH)
 ---------------------------------------------------
