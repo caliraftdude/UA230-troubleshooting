@@ -78,6 +78,7 @@ The following table lists VLANS, IP Addresses and Credentials for all components
       - ``admin``/``admin``
     * - Lab Server
         - **Internal:** 10.128.20.100
+      - ``Administrator``/``none``
 
 .. |image0| image:: /_static/class4/image2.png
 	 :width: 6.48475in
