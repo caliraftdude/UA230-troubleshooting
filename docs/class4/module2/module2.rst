@@ -50,7 +50,7 @@ DNS Resolver for System Configuration (TMSH)
 
 4. To verify, use the following command:
    **list sys dns**
-  
+
    You should see the following reply:
 |image250|
 
@@ -111,10 +111,10 @@ Access Policy (APM) SSO Configuration – NTLMv1 (TMSH)
 
 
 Access Policy (APM) Access Profile Creation (see GUI steps)
---------------------------------------------------
+-----------------------------------------------------------
 
 .. NOTE::
-   In order to gain familiarity with the Visual Policy Editor, please follow the GUI method of Access Policy creation: 
+   In order to gain familiarity with the Visual Policy Editor, please follow the GUI method of Access Policy creation:
    https://ua230-troubleshooting-2018-dev.readthedocs.io/en/latest/class4/module1/module1.html#access-policy-apm-access-profile-creation
 
 Local Traffic (LTM) Pool and Member Creation (TMSH)
@@ -174,4 +174,3 @@ Local Traffic (LTM) Virtual Server Creation (TMSH)
 .. |image256| image:: /_static/class4/image256.png
    :width: 759px
    :height: 337px
-
