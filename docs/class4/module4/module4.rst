@@ -179,7 +179,7 @@ rapidly for proper inspection during the troubleshooting phase.
 |image86|
 
 5. Finalize the update by confirming the box is checked next to the
-   profile and clicking **APPLY ACESS POLICY**
+   profile and clicking **APPLY ACCESS POLICY**
 
 **TEST 2**
 

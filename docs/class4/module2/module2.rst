@@ -59,7 +59,7 @@ NTP Server for System Configuration (TMSH)
 ------------------------------------------
 1. To configure one or more NTP servers for the BIG-IP system, use the following command syntax:
 
-   **modify sys ntp servers add {hostname hostname....}**
+   **modify sys ntp servers add { hostname }**
 
 2. Configure as follows:
 
